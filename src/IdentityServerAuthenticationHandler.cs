@@ -56,7 +56,6 @@ namespace IdentityServer4.AccessTokenValidation
                     {
                         _logger.LogTrace("Token is a JWT and is supported.");
 
-
                         Context.Items.Add(IdentityServerAuthenticationDefaults.EffectiveSchemeKey + Scheme.Name,
                             jwtScheme);
                         return await Context.AuthenticateAsync(jwtScheme);
